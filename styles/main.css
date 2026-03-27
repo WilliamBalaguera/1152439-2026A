@@ -190,3 +190,8 @@ body.dark {
     transform: scale(0.8);
     pointer-events: none;
 }
+.hero img {
+    width: 400px;   /* tamaño ideal */
+    max-width: 100%;
+    height: auto;
+}
