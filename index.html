@@ -1,0 +1,133 @@
+<!-- Token: 1152439-2026A | Producto: MapStack -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>MapStack</title>
+<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body data-student="1152439-2026A">
+
+<!-- NAV -->
+<nav class="menu">
+    <a href="#seccion-hero">Inicio</a>
+    <a href="#seccion-caracteristicas">Características</a>
+    <a href="#seccion-como-funciona">Cómo funciona</a>
+    <a href="#seccion-precios">Precios</a>
+    <a href="#seccion-testimonios">Testimonios</a>
+    <a href="#seccion-contacto">Contacto</a>
+    <button onclick="toggleTema()">🌙</button>
+</nav>
+
+<!-- HERO -->
+<section id="seccion-hero" class="hero">
+    <div>
+        <h1 class="titulo-hero">MapStack</h1>
+        <p class="eslogan">
+            Integra mapas interactivos en tus aplicaciones web
+            de forma rápida, segura y profesional.
+        </p>
+        <p id="saludo"></p>
+        <button onclick="scrollToPrecios()">Ver planes</button>
+    </div>
+    <img src="img/mapa.jpg" alt="Mapa">
+</section>
+
+<!-- CARACTERISTICAS -->
+<section id="seccion-caracteristicas">
+    <h2 class="titulo-caracteristicas">Características</h2>
+
+    <div class="filtros">
+        <button onclick="filtrar('core')">Core</button>
+        <button onclick="filtrar('integracion')">Integración</button>
+        <button onclick="filtrar('seguridad')">Seguridad</button>
+        <button onclick="filtrar('all')">Todas</button>
+    </div>
+
+    <p id="contador"></p>
+
+    <div class="tarjetas">
+        <div class="card" data-categoria="core">Mapas interactivos</div>
+        <div class="card" data-categoria="integracion">API sencilla</div>
+        <div class="card" data-categoria="seguridad">Protección de datos</div>
+        <div class="card" data-categoria="core">Capas dinámicas</div>
+        <div class="card" data-categoria="integracion">Exportación</div>
+        <div class="card" data-categoria="seguridad">Encriptación</div>
+    </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="seccion-como-funciona">
+    <h2>Cómo funciona</h2>
+
+    <div class="paso" onclick="togglePaso(this)">1. Crear cuenta</div>
+    <div class="detalle">Regístrate en segundos</div>
+
+    <div class="paso" onclick="togglePaso(this)">2. Crear mapa</div>
+    <div class="detalle">Diseña mapas personalizados</div>
+
+    <div class="paso" onclick="togglePaso(this)">3. Integrar</div>
+    <div class="detalle">Conecta con tu aplicación</div>
+
+    <div class="paso" onclick="togglePaso(this)">4. Publicar</div>
+    <div class="detalle">Comparte tu mapa</div>
+</section>
+
+<!-- PRECIOS -->
+<section id="seccion-precios">
+    <h2>Planes</h2>
+
+    <label>
+        <input type="checkbox" id="togglePrecio" onchange="cambiarPrecio()"> Anual
+    </label>
+
+    <div class="plan">
+        <h3>Gratis</h3>
+        <p class="precio" data-mensual="0">$0</p>
+    </div>
+
+    <div class="plan destacado">
+        <h3>Pro</h3>
+        <p class="precio" data-mensual="20">$20</p>
+    </div>
+
+    <div class="plan">
+        <h3>Empresarial</h3>
+        <p class="precio" data-mensual="50">$50</p>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="seccion-testimonios">
+    <h2>Testimonios</h2>
+    <p id="testimonio"></p>
+    <button onclick="anterior()">Anterior</button>
+    <button onclick="siguiente()">Siguiente</button>
+</section>
+
+<!-- CONTACTO -->
+<section id="seccion-contacto">
+    <h2>Contacto</h2>
+
+    <form onsubmit="return validarFormulario()">
+        <input type="text" id="nombre" placeholder="Nombre"><br>
+        <input type="email" id="correo" placeholder="Correo"><br>
+        <input type="text" id="asunto" placeholder="Asunto"><br>
+        <textarea id="mensaje" placeholder="Mensaje"></textarea><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="confirmacion"></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>MapStack - 1152439-2026A</p>
+    <p id="year"></p>
+</footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
