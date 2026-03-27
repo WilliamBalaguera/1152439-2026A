@@ -40,16 +40,29 @@ function scrollToPrecios() {
  * Por qué así: uso dataset para identificar categorías
  * Alternativa desc: usar clases CSS
  */
-function filtrar(cat) {
+function filtrar(e, cat) {
     const cards = document.querySelectorAll(".card");
+    const botones = document.querySelectorAll(".btn-filtro");
+
     let visibles = 0;
+
+    // quitar activo
+    botones.forEach(b => b.classList.remove("activo"));
+
+    // activar botón actual
+    e.target.classList.add("activo");
 
     cards.forEach(c => {
         if (cat === "all" || c.dataset.categoria === cat) {
+            c.classList.remove("oculta");
             c.style.display = "inline-block";
             visibles++;
         } else {
-            c.style.display = "none";
+            c.classList.add("oculta");
+
+            setTimeout(() => {
+                c.style.display = "none";
+            }, 300);
         }
     });
 
