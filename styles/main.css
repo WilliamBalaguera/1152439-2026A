@@ -1,12 +1,20 @@
 :root {
-    --primario: #007bff;
-    --fondo: #f4f4f4;
+    --primario: #2563eb;
+    --secundario: #1e293b;
+    --fondo: #f8fafc;
+    --blanco: #ffffff;
 }
 
+/* GLOBAL */
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: 'Segoe UI', sans-serif;
     background: var(--fondo);
+    color: var(--secundario);
+}
+
+section {
+    padding: 80px 60px;
 }
 
 /* NAV */
@@ -15,42 +23,131 @@ body {
     top: 0;
     width: 100%;
     background: var(--primario);
-    padding: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .menu a {
     color: white;
-    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu button {
+    background: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
 }
 
 /* HERO */
 .hero {
     display: flex;
     justify-content: space-between;
-    padding: 120px 40px;
+    align-items: center;
+    padding: 140px 60px;
 }
 
-/* TARJETAS */
+.titulo-hero {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.eslogan {
+    font-size: 18px;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: var(--primario);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* CARDS */
+.tarjetas {
+    margin-top: 20px;
+}
+
 .card {
     display: inline-block;
-    padding: 10px;
+    background: var(--blanco);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* FILTROS */
+.filtros button {
     margin: 5px;
-    background: white;
+}
+
+/* PASOS */
+.paso {
+    background: var(--blanco);
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.detalle {
+    display: none;
+    margin-left: 10px;
 }
 
 /* PLANES */
 .plan {
     display: inline-block;
-    border: 1px solid black;
-    padding: 10px;
+    background: var(--blanco);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .destacado {
-    background: yellow;
+    background: var(--primario);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* TESTIMONIOS */
+#testimonio {
+    font-style: italic;
+    margin: 20px 0;
+}
+
+/* FORM */
+input, textarea {
+    width: 300px;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
 }
 
 /* DARK MODE */
 body.dark {
-    --fondo: #121212;
-    color: white;
+    --fondo: #0f172a;
+    --secundario: #e2e8f0;
+    --blanco: #1e293b;
 }
