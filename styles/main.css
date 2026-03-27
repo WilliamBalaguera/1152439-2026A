@@ -1,0 +1,56 @@
+:root {
+    --primario: #007bff;
+    --fondo: #f4f4f4;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: var(--fondo);
+}
+
+/* NAV */
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--primario);
+    padding: 10px;
+}
+
+.menu a {
+    color: white;
+    margin: 10px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 40px;
+}
+
+/* TARJETAS */
+.card {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    background: white;
+}
+
+/* PLANES */
+.plan {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.destacado {
+    background: yellow;
+}
+
+/* DARK MODE */
+body.dark {
+    --fondo: #121212;
+    color: white;
+}
